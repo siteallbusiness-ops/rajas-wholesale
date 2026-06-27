@@ -1,0 +1,215 @@
+.section {
+  padding-block: var(--space-10) var(--space-12);
+  background: var(--color-gray-50);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: var(--space-12) var(--space-14);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: var(--space-10);
+  }
+}
+
+.eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.title {
+  font-size: clamp(var(--font-size-2xl), 3vw, var(--font-size-3xl));
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  max-width: 28rem;
+  line-height: var(--line-height-relaxed);
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: var(--font-size-base);
+  }
+}
+
+.viewAll {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.viewAll:hover {
+  background: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-5);
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-6);
+  }
+
+  .grid li:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .grid li:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin-inline: auto;
+    width: 100%;
+  }
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(10, 17, 40, 0.75) 100%
+  );
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-5);
+  color: var(--color-white);
+  z-index: 1;
+}
+
+.cardTitle {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-1);
+  line-height: var(--line-height-snug);
+}
+
+@media (min-width: 768px) {
+  .cardTitle {
+    font-size: var(--font-size-xl);
+  }
+}
+
+.cardText {
+  font-size: var(--font-size-xs);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-3);
+  max-width: 20rem;
+}
+
+@media (min-width: 768px) {
+  .cardText {
+    font-size: var(--font-size-sm);
+  }
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  padding-top: var(--space-2);
+  border-top: 2px solid var(--accent, var(--color-primary));
+  width: fit-content;
+  transition: gap var(--transition-fast);
+}
+
+.card:hover .cta {
+  gap: var(--space-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .image {
+    transform: none;
+  }
+}

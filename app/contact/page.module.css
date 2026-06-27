@@ -1,0 +1,61 @@
+.page {
+  padding-block: var(--space-10) var(--space-14);
+  background: var(--color-gray-50);
+  min-height: 50vh;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding-block: var(--space-12) var(--space-16);
+    min-height: 60vh;
+  }
+}
+
+.title {
+  font-size: clamp(var(--font-size-2xl), 4vw, var(--font-size-4xl));
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+@media (min-width: 768px) {
+  .title {
+    margin-bottom: var(--space-8);
+  }
+}
+
+.info {
+  text-align: center;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-8);
+  line-height: var(--line-height-relaxed);
+}
+
+.info p {
+  margin-bottom: var(--space-2);
+}
+
+.info a {
+  color: var(--color-primary);
+}
+
+.info a:hover {
+  text-decoration: underline;
+}
+
+.form :global(button) {
+  border-radius: var(--radius-full) !important;
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.form :global(input),
+.form :global(textarea) {
+  border-radius: var(--radius-full) !important;
+}
+
+.form :global(textarea) {
+  border-radius: var(--radius-lg) !important;
+}

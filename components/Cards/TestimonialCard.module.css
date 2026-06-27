@@ -1,0 +1,44 @@
+.quote {
+  margin-bottom: var(--space-6);
+}
+
+.quote p {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
+  font-style: italic;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+.author {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  font-style: normal;
+}
+
+.role {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  margin-top: var(--space-1);
+}
