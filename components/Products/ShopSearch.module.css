@@ -1,0 +1,11 @@
+.wrap {
+  margin-top: var(--space-5);
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    margin-top: var(--space-8);
+    max-width: 48rem;
+  }
+}

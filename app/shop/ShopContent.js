@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import ProductGrid from "@/components/Products/ProductGrid";
 import ShopToolbar from "@/components/Products/ShopToolbar";
@@ -19,6 +20,15 @@ export default function ShopContent() {
   const availability = searchParams.get("availability") || "";
   const sort = searchParams.get("sort") || "featured";
   const page = parseInt(searchParams.get("page") || "1", 10);
+  const queryKey = searchParams.toString();
+
+  useEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [queryKey]);
 
   let filtered = filterProducts(PRODUCTS, {
     search,

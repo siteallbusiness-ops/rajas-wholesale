@@ -11,6 +11,7 @@ export default function ProductForm({
   product,
   showPrice = false,
   onAdded,
+  variant = "default",
 }) {
   const addItem = useCartStore((state) => state.addItem);
   const [selectedVariantId, setSelectedVariantId] = useState(
@@ -52,7 +53,7 @@ export default function ProductForm({
   };
 
   return (
-    <div className={styles.form}>
+    <div className={cn(styles.form, variant === "drawer" && styles.formDrawer)}>
       {showPrice && (
         <div className={styles.priceSection}>
           <div className={styles.priceRow}>
@@ -141,7 +142,11 @@ export default function ProductForm({
 
       <button
         type="button"
-        className={cn(styles.addBtn, isSoldOut && styles.addBtnDisabled)}
+        className={cn(
+          styles.addBtn,
+          variant === "drawer" && styles.addBtnDrawer,
+          isSoldOut && styles.addBtnDisabled
+        )}
         onClick={handleAddToCart}
         disabled={isSoldOut}
       >

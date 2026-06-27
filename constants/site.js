@@ -10,12 +10,6 @@ export const CONTACT = {
   address: "Unit 8, Grand Union Way, Grand Union Enterprise Park, Southall, UB2 4EX",
 };
 
-export const SOCIAL_LINKS = [
-  { label: "Facebook", href: "https://facebook.com", icon: "facebook" },
-  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
-  { label: "X (Twitter)", href: "https://twitter.com", icon: "twitter" },
-];
-
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Shop All", href: "/shop" },
@@ -45,7 +39,8 @@ export const PAYMENT_METHODS = [
 
 export const CATEGORY_SLIDES = [
   { label: "Drinks", href: "/shop?tag=Drinks" },
-  { label: "Chocolates", href: "/shop?tag=chocolate" },
+  { label: "Chocolates", href: "/shop?tag=Chocolates" },
   { label: "Crisps", href: "/shop?tag=Crisps" },
-  { label: "Beverages", href: "/shop?tag=Beverages" },
+  { label: "Sweets", href: "/shop?tag=Sweets" },
+  { label: "Cookies", href: "/shop?tag=Cookies" },
 ];

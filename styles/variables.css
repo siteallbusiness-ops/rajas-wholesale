@@ -1,5 +1,5 @@
 :root {
-  /* Colors - Sweetbox-inspired palette */
+  /* Colors - Rajas Wholesale brand palette */
   --color-primary: #c41e3a;
   --color-primary-light: #e02445;
   --color-primary-dark: #9a1830;
@@ -100,6 +100,7 @@
   --container-max: var(--container-xl);
   --container-padding: var(--space-4);
   --container-padding-lg: var(--space-6);
+  --container-padding-sm: var(--space-3);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -125,8 +126,9 @@
   --breakpoint-2xl: 1440px;
 
   /* Layout */
-  --header-height: 4.5rem;
-  --header-height-mobile: 4rem;
+  --header-height: 4.25rem;
+  --header-height-mobile: 3.75rem;
+  --header-utility-height: 0px;
   --footer-padding-y: var(--space-12);
   --section-padding-y: var(--space-16);
   --section-padding-y-sm: var(--space-10);
@@ -145,5 +147,12 @@
   :root {
     --container-padding: var(--container-padding-lg);
     --section-padding-y: var(--space-20);
+  }
+}
+
+@media (max-width: 479px) {
+  :root {
+    --container-padding: 1rem;
+    --header-height-mobile: 3.5rem;
   }
 }

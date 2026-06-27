@@ -1,10 +1,8 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
-/* Product sections */
 .featured {
   padding-block: var(--space-12) var(--space-14);
   background: var(--color-white);
@@ -17,7 +15,6 @@
 }
 
 .popular {
-  background: var(--color-white);
   padding-bottom: var(--space-16);
 }
 
@@ -83,7 +80,9 @@
   font-weight: var(--font-weight-semibold);
   border-radius: var(--radius-full);
   white-space: nowrap;
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 @media (min-width: 768px) {

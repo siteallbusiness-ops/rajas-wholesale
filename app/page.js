@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Sections/Container";
-import CategoryCarousel from "@/components/Home/CategoryCarousel";
+import HomeHero from "@/components/Home/HomeHero";
 import ShopHighlights from "@/components/Home/ShopHighlights";
 import PromoBanner from "@/components/Home/PromoBanner";
 import ProductGrid from "@/components/Products/ProductGrid";
@@ -22,7 +22,7 @@ export default function HomePage() {
 
   return (
     <div className={styles.home}>
-      <CategoryCarousel />
+      <HomeHero />
 
       <ShopHighlights />
 

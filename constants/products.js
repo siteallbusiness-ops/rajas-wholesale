@@ -1,12 +1,14 @@
-// Auto-generated from Sweetbox Wholesale product data
-export const PRODUCTS = [
+// Wholesale product catalogue for Rajas Wholesale
+import { OREO_PRODUCTS } from "./oreoProducts";
+
+const BASE_PRODUCTS = [
   {
     "id": "8729179914576",
     "handle": "a-w-root-beer-usa",
     "title": "A&W Root Beer USA",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Beverages",
       "Drinks"
@@ -57,7 +59,7 @@ export const PRODUCTS = [
     "title": "Bounty Std 24PK",
     "description": "For all the Bounty Lovers A box of Bounty for the whole family!",
     "fullDescription": "For all the Bounty Lovers A box of Bounty for the whole family!",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -98,7 +100,7 @@ export const PRODUCTS = [
     "title": "Bounty Trio Box",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate",
       "Snacks"
@@ -179,7 +181,7 @@ export const PRODUCTS = [
     "title": "Cadbury Wispa Bars 48PK",
     "description": "The velvety-textured milk chocolate bar first hit the shelves in 1981 before disappearing in 2003. But such was the popularity of this sumptuous chocolate with its tiny but dense bubbles that people began an online campaign to bring it back. Cadbury was happy to oblige. Available in cartons of 48 ba",
     "fullDescription": "The velvety-textured milk chocolate bar first hit the shelves in 1981 before disappearing in 2003. But such was the popularity of this sumptuous chocolate with its tiny but dense bubbles that people began an online campaign to bring it back. Cadbury was happy to oblige. Available in cartons of 48 bars, these are a real retro treat and a great hand out for friends, family and colleagues.",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -220,7 +222,7 @@ export const PRODUCTS = [
     "title": "Camel Blue Plastic Carrier bags",
     "description": "Large Carrier Bags 11 x 17 x 21\" 23 Micron - Plastic Carrier Bags Heavy Duty Blue Vest Carrier Bags - Eco Friendly Recycled Strong Plastic Bags 1000 blue carrier bags. Standard medium convenience store bags.",
     "fullDescription": "Large Carrier Bags 11 x 17 x 21\" 23 Micron - Plastic Carrier Bags Heavy Duty Blue Vest Carrier Bags - Eco Friendly Recycled Strong Plastic Bags 1000 blue carrier bags. Standard medium convenience store bags.",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/blue-vest-style-jumbo-carrier-bags-12-x-18_2.webp?v=1701092676",
     "images": [
@@ -254,49 +256,12 @@ export const PRODUCTS = [
     "priceFrom": false
   },
   {
-    "id": "8729189056848",
-    "handle": "candypop-po",
-    "title": "Candypop po",
-    "description": "",
-    "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
-    "tags": [],
-    "image": null,
-    "images": [],
-    "variants": [
-      {
-        "id": "47683502473552",
-        "title": "Default Title",
-        "price": 0,
-        "compareAtPrice": null,
-        "available": false
-      }
-    ],
-    "options": [
-      {
-        "name": "Title",
-        "position": 1,
-        "values": [
-          "Default Title"
-        ]
-      }
-    ],
-    "badge": "sold-out",
-    "buttonLabel": "Sold out",
-    "available": false,
-    "soldOut": true,
-    "hasVariants": false,
-    "price": 0,
-    "compareAtPrice": null,
-    "priceFrom": false
-  },
-  {
     "id": "8726298296656",
     "handle": "coca-cola-cans-24x330ml",
     "title": "Coca Cola Cans 24x330ml",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Beverages",
       "Drinks"
@@ -340,7 +305,7 @@ export const PRODUCTS = [
     "title": "Design Clipper Lighters (x48)",
     "description": "Clipper lighters have been a staple in the lighter world for more than 50 years because of their 100% unique user friendly design. Clipper lighters are round and feature a removable flint housing which doubles as a poker tool when rolling your own papers. The bottom of the housing even comes out to ",
     "fullDescription": "Clipper lighters have been a staple in the lighter world for more than 50 years because of their 100% unique user friendly design. Clipper lighters are round and feature a removable flint housing which doubles as a poker tool when rolling your own papers. The bottom of the housing even comes out to allow access to the flint for replacement, so you can refill the butane and the flint and keep this lighter going. Package total 4 pcs of Multicolor Clipper Lighters Collection. Brand New Original Multicolor Clipper Lighter Full Size Clipper Lighter, 3\" Tall Childproof for Safety Removable/Replaceable Flint Built In Tamper and Poker Under Strike Wheel High-Quality Printing Lighters are Refillable",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/CLIPPER_ASSORTED_STYLES__18641.png?v=1701190132",
     "images": [
@@ -379,7 +344,7 @@ export const PRODUCTS = [
     "title": "Feastables Mr Beast Chocolate",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -504,7 +469,7 @@ export const PRODUCTS = [
     "title": "Japanese Coca Cola (x24)",
     "description": "Japanese Coca Cola Get yourself a 24pk at a bargain! One of our best sellers!",
     "fullDescription": "Japanese Coca Cola Get yourself a 24pk at a bargain! One of our best sellers!",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Beverages",
       "Drinks"
@@ -546,7 +511,7 @@ export const PRODUCTS = [
     "title": "Japanese Fanta All Flavours",
     "description": "Ingredients : High Fructose Corn Syrup, Carbon Dioxide (E290), Flavoring, Acidulant, Preservative [Sodium Benzoate (E211)]. Allergy Advice: For allergens, please see ingredients in bold and underlined. Storage: Store in a cool and dry place, Avoid direct sunlight. P roduct of Japan",
     "fullDescription": "Ingredients : High Fructose Corn Syrup, Carbon Dioxide (E290), Flavoring, Acidulant, Preservative [Sodium Benzoate (E211)]. Allergy Advice: For allergens, please see ingredients in bold and underlined. Storage: Store in a cool and dry place, Avoid direct sunlight. P roduct of Japan",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Beverages",
       "Drinks"
@@ -661,7 +626,7 @@ export const PRODUCTS = [
     "title": "Jolly Rancher hard candy All flavours",
     "description": "An iconic brand, with one of the nation’s favourite Hard Candy! Jolly Ranchers candy is extremely tasty and comes in a wide range of different forms and fruity flavours, so there’s going to be something for everyone! These small candies are a perfect long lasting treat, great for sucking on when you",
     "fullDescription": "An iconic brand, with one of the nation’s favourite Hard Candy! Jolly Ranchers candy is extremely tasty and comes in a wide range of different forms and fruity flavours, so there’s going to be something for everyone! These small candies are a perfect long lasting treat, great for sucking on when you’re out and about or sharing with your friends! The original hard candy, packed with your favourite fruity flavours; Grape, Cherry, Blue Raspberry, Green Apple and Watermelon! Imported from the USA",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/jopll.webp?v=1701109036",
     "images": [
@@ -748,7 +713,7 @@ export const PRODUCTS = [
     "title": "Jolly Rancher Lollypop All",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/FullSizeRender_2c841b05-90c6-458a-8566-971a2f72a5bd.jpg?v=1701311293",
     "images": [
@@ -925,7 +890,7 @@ export const PRODUCTS = [
     "title": "Laffy Taffy All",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/CE5BE9D1-C78E-441B-804A-32FF987947F5.jpg?v=1701291664",
     "images": [
@@ -1004,7 +969,7 @@ export const PRODUCTS = [
     "title": "Lotte Hershey's Chocolate Chip Cookies Japanese",
     "description": "Exclusive Hershey's Japanese cookies. Bringing you exclusive confectionaries from all over the world!",
     "fullDescription": "Exclusive Hershey's Japanese cookies. Bringing you exclusive confectionaries from all over the world!",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/4903333175857.webp?v=1701083795",
     "images": [
@@ -1043,7 +1008,7 @@ export const PRODUCTS = [
     "title": "M&M'S USA 24PK",
     "description": "M&amp;M'S® chocolate candies have been a famous candy treat since 1941. The snack-sized pieces of chocolate in a colorful candy shell are instantly recognizable all over the globe. M&amp;M'S® chocolate candies are available in flavours, such as Milk Chocolate, Peanut, Dark Chocolate, Almond and Pean",
     "fullDescription": "M&amp;M'S® chocolate candies have been a famous candy treat since 1941. The snack-sized pieces of chocolate in a colorful candy shell are instantly recognizable all over the globe. M&amp;M'S® chocolate candies are available in flavours, such as Milk Chocolate, Peanut, Dark Chocolate, Almond and Peanut Butter.",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -1116,7 +1081,7 @@ export const PRODUCTS = [
     "title": "Mars std 40PK",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -1157,7 +1122,7 @@ export const PRODUCTS = [
     "title": "Maxican Coca cola & Fanta Glass Bottle Range 355ml Mexico Import",
     "description": "Beverage and Fizzy",
     "fullDescription": "Beverage and Fizzy",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/Screenshot-20250106_191444_Google.jpg?v=1736191191",
     "images": [
@@ -1214,7 +1179,7 @@ export const PRODUCTS = [
     "title": "Mike n Ike Changemaker (24 Pack)",
     "description": "Mike &amp; Ike 24 per case. Fruit flavoured candies. Imported from the USA.",
     "fullDescription": "Mike &amp; Ike 24 per case. Fruit flavoured candies. Imported from the USA.",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/81-btffjFLL._AC_UL600_SR600_600.jpg?v=1701201153",
     "images": [
@@ -1309,7 +1274,7 @@ export const PRODUCTS = [
     "title": "Mike n Ike Theatre Box",
     "description": "Mike &amp; Ike candies were first introduced in Pennslyvania back in 1940, and these soft &amp; chewy fruit flavoured candies have been loved by generations of Americans since! You can now find Mike &amp; Ike candies in lots of different flavours and varieties, but these are the original fruits reci",
     "fullDescription": "Mike &amp; Ike candies were first introduced in Pennslyvania back in 1940, and these soft &amp; chewy fruit flavoured candies have been loved by generations of Americans since! You can now find Mike &amp; Ike candies in lots of different flavours and varieties, but these are the original fruits recipe, including Cherry, Lemon, Strawberry, Lime and Orange. In a convenient theater box they are perfect for sharing! Imported from the USA.",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/mni.webp?v=1701116674",
     "images": [
@@ -1385,7 +1350,7 @@ export const PRODUCTS = [
     "title": "Milkybar Choo (IND)",
     "description": "Milkybar Choo Classics from India – 28 bars of delicious white Milkybar chocolate surrounding a soft and chewy centre. If you’ve never had one before, people have described Milkybar Choo as being somewhere between a Fudge bar and a Curly Wurly. Having been discontinued in the UK in the Nineties many",
     "fullDescription": "Milkybar Choo Classics from India – 28 bars of delicious white Milkybar chocolate surrounding a soft and chewy centre. If you’ve never had one before, people have described Milkybar Choo as being somewhere between a Fudge bar and a Curly Wurly. Having been discontinued in the UK in the Nineties many fans thought they would never get to have these treats again, but thanks to Nestle India we have been able to bring them back to the UK. Product of India",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -1442,7 +1407,7 @@ export const PRODUCTS = [
     "title": "Milkyway Crispy Roll",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -1483,7 +1448,7 @@ export const PRODUCTS = [
     "title": "Monster Energy M3 Extra Strength Glass Bottle import from Japan",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/Screenshot-20250106_192322_Google.jpg?v=1736191452",
     "images": [
@@ -1522,7 +1487,7 @@ export const PRODUCTS = [
     "title": "Nerds Rope All Flavours",
     "description": "NERDS VERY BERRY crunchy Nerds, stuck to a sweet, chewy, candy rope. These berry-flavored candy ropes include all of the fruit flavors you know and love. Take a bite and experience the flavor burst! Needzo purchases only from licensed manufacturers. We combine complementary items for the perfect gif",
     "fullDescription": "NERDS VERY BERRY crunchy Nerds, stuck to a sweet, chewy, candy rope. These berry-flavored candy ropes include all of the fruit flavors you know and love. Take a bite and experience the flavor burst! Needzo purchases only from licensed manufacturers. We combine complementary items for the perfect gift-giving. We repackage all items in our custom packaging to ensure arrival in perfect snacking condition. Whether you're giving or receiving this season, purchase confidently from Needzo! NERDS RAINBOW ropes are bright and colorful! Consisting of nerds candy stuck to a fruity, gummy string. Ropes are soft and chewy on the inside, and sweet and crunchy on the outside, making an irresistible combo. FRUITY candies include all of your favorite fruit flavors. They are the perfect sweet treat! MOVIE NIGHT AND ROAD TRIP ESSENTIALS need a snack to keep your kids quiet or on a long road trip or a treat to compliment your popcorn during a movie night? We've got you covered. Whether it's a day trip out or a movie night in, these Nerd Ropes will make the whole family happy.",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Candy"
     ],
@@ -1579,7 +1544,7 @@ export const PRODUCTS = [
     "title": "Nurofen Express 6PKx10",
     "description": "Nurofen Express 6PK x (10)",
     "fullDescription": "Nurofen Express 6PK x (10)",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/A876E9C5-BA0D-4F22-8C1A-46BEAA526ED6.jpg?v=1701292006",
     "images": [
@@ -1618,7 +1583,7 @@ export const PRODUCTS = [
     "title": "OCB Black Premium King Size Slim Rolling Papers",
     "description": "OCB Black Premium King Size Slim Rolling Papers Cigarette Papers Smoking Papers Pack of 50",
     "fullDescription": "OCB Black Premium King Size Slim Rolling Papers Cigarette Papers Smoking Papers Pack of 50",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/FullSizeRender_427bbbd7-f8c0-4574-86d1-bb88a2ef3aa5.jpg?v=1701310074",
     "images": [
@@ -1673,7 +1638,7 @@ export const PRODUCTS = [
     "title": "Paracetamol",
     "description": "Paracetamol 12PK",
     "fullDescription": "Paracetamol 12PK",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/IMG-1970.jpg?v=1701291871",
     "images": [
@@ -1712,7 +1677,7 @@ export const PRODUCTS = [
     "title": "Raw Rolling Papers All & Accessories",
     "description": "The ideal choice for smokers who prefer a longer smoke. RAW Classic Connoisseur Kingsize Slim is an all-in-one solution that comes elegantly packaged with a rubber band holding it all together for easy portability and maximum organization. Smokers love it!",
     "fullDescription": "The ideal choice for smokers who prefer a longer smoke. RAW Classic Connoisseur Kingsize Slim is an all-in-one solution that comes elegantly packaged with a rubber band holding it all together for easy portability and maximum organization. Smokers love it!",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Smoking Accessories"
     ],
@@ -1793,7 +1758,7 @@ export const PRODUCTS = [
     "title": "Red Bull 250ml 24Pk",
     "description": "RED BULL GIVES YOU WINGS In 1987, Red Bull not only launched a completely new product, it created a whole new product category — energy drinks. From day one, Red Bull has been giving wings to people and ideas, setting many milestones in sports and culture. Safety Information: Energy Drink - high caf",
     "fullDescription": "RED BULL GIVES YOU WINGS In 1987, Red Bull not only launched a completely new product, it created a whole new product category — energy drinks. From day one, Red Bull has been giving wings to people and ideas, setting many milestones in sports and culture. Safety Information: Energy Drink - high caffeine content. Not recommended for children or pregnant or breast-feeding women (32 mg/100 ml). Consume moderately. Ingredients: Water, Sucrose, Glucose, Acidifier Citric Acid, Carbon Dioxide, Taurine (0.4%), Acidity Regulator (Sodium Carbonates, Magnesium Carbonate), Caffeine (0.03%), Vitamins (Niacin, Pantothenic Acid, B6, B12), Flavourings, Colours (Caramel, Riboflavin)",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Drinks"
     ],
@@ -1835,7 +1800,7 @@ export const PRODUCTS = [
     "title": "Rizla Rolling Papers",
     "description": "Rizla Rolling Papers 50pk Rizla rolling papers",
     "fullDescription": "Rizla Rolling Papers 50pk Rizla rolling papers",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/riz.jpg?v=1701108179",
     "images": [
@@ -1906,7 +1871,7 @@ export const PRODUCTS = [
     "title": "Samyang Buldak Ramen All Flavours",
     "description": "Exclusive Korean imported Ramen. Hot chicken flavour Ramen. Enjoy these delicious and ready to eat in minute noodles. (Halal)",
     "fullDescription": "Exclusive Korean imported Ramen. Hot chicken flavour Ramen. Enjoy these delicious and ready to eat in minute noodles. (Halal)",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/8801073113893.webp?v=1700942917",
     "images": [
@@ -1999,7 +1964,7 @@ export const PRODUCTS = [
     "title": "Snickers 40x48g",
     "description": "Snickers std bar Milk chocolate with soft nougat, a caramel centre and fresh roasted peanuts Free from artificial colours, flavours &amp; preservatives Suitable for vegetarians 40 x 48g bars Ingredients Sugar , Peanuts , Glucose Syrup , Skimmed Milk Powder , Cocoa Butter , Cocoa Mass , Sunflower Oil",
     "fullDescription": "Snickers std bar Milk chocolate with soft nougat, a caramel centre and fresh roasted peanuts Free from artificial colours, flavours &amp; preservatives Suitable for vegetarians 40 x 48g bars Ingredients Sugar , Peanuts , Glucose Syrup , Skimmed Milk Powder , Cocoa Butter , Cocoa Mass , Sunflower Oil , Palm Fat , Lactose and Protein from Whey (from Milk ) , Whey Powder (from Milk ) , Milk Fat , Emulsifiers ( Soya Lecithin) , Salt , Coconut Oil , Egg White Powder , Natural Vanilla Extract , Milk Protein Milk Chocolate contains Milk Solids 14% minimum Milk Chocolate contains Vegetable Fats in addition to Cocoa Butter .",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -2040,7 +2005,7 @@ export const PRODUCTS = [
     "title": "Sour patch kids bags",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/a4afa8a5-56c6-4228-aa07-8181b447b5f8.92a3d671b0973f392bdd68763626f18c.webp?v=1701104711",
     "images": [
@@ -2127,7 +2092,7 @@ export const PRODUCTS = [
     "title": "Sour Patch Theatre Boxes All",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/IMG-1977.jpg?v=1701310583",
     "images": [
@@ -2199,7 +2164,7 @@ export const PRODUCTS = [
     "title": "Sovereign Turbojet Spray",
     "description": "Sovereign Turbojet Air Sanitiser Spray Available in 10 flavours",
     "fullDescription": "Sovereign Turbojet Air Sanitiser Spray Available in 10 flavours",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [],
     "image": "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/11x-mix-bundle-sovereign-car-home-turbojet-air-freshener-sanitiser-spray-blast-can.jpg?v=1701106111",
     "images": [
@@ -2310,7 +2275,7 @@ export const PRODUCTS = [
     "title": "Sunkist All flavours-355ml Import from USA",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Drinks"
     ],
@@ -2397,7 +2362,7 @@ export const PRODUCTS = [
     "title": "Swan Filter Tips All",
     "description": "SWAN EXTRA SLIM FILTER TIPS 20 BOXES EACH CONTAINING 120 FILTER TIPS NEW SEALED BOX WILL BE SENT",
     "fullDescription": "SWAN EXTRA SLIM FILTER TIPS 20 BOXES EACH CONTAINING 120 FILTER TIPS NEW SEALED BOX WILL BE SENT",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Smoking Accessories"
     ],
@@ -2462,7 +2427,7 @@ export const PRODUCTS = [
     "title": "Takis Fuego Crisp 15PK",
     "description": "Takis Fuego Crisps never seen before! indulge in this exclusive snack Imported from the USA",
     "fullDescription": "Takis Fuego Crisps never seen before! indulge in this exclusive snack Imported from the USA",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Crisps"
     ],
@@ -2503,7 +2468,7 @@ export const PRODUCTS = [
     "title": "Takis USA 3.25Oz",
     "description": "Takis Feugo, Nitro, Fajitas, Blue Heat, Guacamole, Feugo Our Hot Chili Pepper artificially flavored rolled corn tortilla chips make quick work of not only extinguishing your own hunger, but they’re also a great food for sharing with friends and family. These snack chips, with their distinctive blue ",
     "fullDescription": "Takis Feugo, Nitro, Fajitas, Blue Heat, Guacamole, Feugo Our Hot Chili Pepper artificially flavored rolled corn tortilla chips make quick work of not only extinguishing your own hunger, but they’re also a great food for sharing with friends and family. These snack chips, with their distinctive blue hue, are not for the faint of heart as they bring a powerful punch of heat, providing a tantalizing and daring snack experience for those who enjoy exploring bold and spicy flavours. The vibrant and eye-catching packaging signifies the dynamic and exhilarating taste journey enclosed within, setting the stage for an intense snacking adventure",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Crisps"
     ],
@@ -2589,7 +2554,7 @@ export const PRODUCTS = [
     "title": "Twix Iced Coffee",
     "description": "New Twix Iced Coffee straight from the States. This ready-to-drink canned coffee beverage is perfect for on-the-go lifestyles.",
     "fullDescription": "New Twix Iced Coffee straight from the States. This ready-to-drink canned coffee beverage is perfect for on-the-go lifestyles.",
-    "vendor": "My Store",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "Beverages",
       "Drinks"
@@ -2631,7 +2596,7 @@ export const PRODUCTS = [
     "title": "Twix std 30PK",
     "description": "",
     "fullDescription": "",
-    "vendor": "Sweetbox Wholesale",
+    "vendor": "Rajas Wholesale",
     "tags": [
       "chocolate"
     ],
@@ -2755,14 +2720,17 @@ export const PRODUCTS = [
   }
 ];
 
+export const PRODUCTS = [...BASE_PRODUCTS, ...OREO_PRODUCTS];
+
 export const FEATURED_PRODUCT_HANDLES = [
+  "oreo-chocolate-wafer-rolls-case-20",
+  "oreo-minis-peanut-butter-usa-12",
   "a-w-root-beer-usa",
   "bounty",
   "bounty-trio-box",
   "brain-licker-blue",
   "cadbury-wispa-bars-48pk",
   "carrier-bag",
-  "candypop-po",
   "coca-cola-cans-24x330ml",
 ];
 

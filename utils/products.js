@@ -1,6 +1,30 @@
-import { PRODUCTS, FEATURED_PRODUCT_HANDLES, PRODUCTS_PER_PAGE } from "@/constants/products";
+import {
+  PRODUCTS as RAW_PRODUCTS,
+  FEATURED_PRODUCT_HANDLES,
+  PRODUCTS_PER_PAGE,
+} from "@/constants/products";
+import { SITE_NAME } from "@/constants/site";
+import { categorizeProduct, matchesCategory } from "@/utils/categorize";
 
-export { PRODUCTS, FEATURED_PRODUCT_HANDLES, PRODUCTS_PER_PAGE };
+export { FEATURED_PRODUCT_HANDLES, PRODUCTS_PER_PAGE };
+
+export const PRODUCTS = RAW_PRODUCTS.map((product) => ({
+  ...product,
+  tags: categorizeProduct(product),
+}));
+
+const LEGACY_VENDOR_NAMES = new Set([
+  "sweetbox wholesale",
+  "my store",
+]);
+
+export function getProductVendor(product) {
+  const vendor = product?.vendor?.trim();
+  if (!vendor || LEGACY_VENDOR_NAMES.has(vendor.toLowerCase())) {
+    return SITE_NAME;
+  }
+  return vendor;
+}
 
 export function getProductByHandle(handle) {
   return PRODUCTS.find((product) => product.handle === handle);
@@ -16,16 +40,17 @@ export function filterProducts(products, { availability, minPrice, maxPrice, tag
   return products.filter((product) => {
     if (search) {
       const query = search.toLowerCase();
+      const categories = categorizeProduct(product);
       const matchesSearch =
         product.title.toLowerCase().includes(query) ||
-        product.tags.some((t) => t.toLowerCase().includes(query));
+        product.description?.toLowerCase().includes(query) ||
+        product.vendor?.toLowerCase().includes(query) ||
+        categories.some((category) => category.toLowerCase().includes(query));
       if (!matchesSearch) return false;
     }
 
-    if (tag) {
-      const tagLower = tag.toLowerCase();
-      const hasTag = product.tags.some((t) => t.toLowerCase() === tagLower);
-      if (!hasTag) return false;
+    if (tag && !matchesCategory(product, tag)) {
+      return false;
     }
 
     if (availability === "in-stock" && product.soldOut) return false;
@@ -69,13 +94,15 @@ export function getDefaultVariant(product) {
 }
 
 export function getRelatedProducts(product, limit = 4) {
-  if (!product.tags?.length) {
+  const categories = categorizeProduct(product);
+
+  if (!categories.length) {
     return PRODUCTS.filter((p) => p.id !== product.id).slice(0, limit);
   }
 
   return PRODUCTS.filter(
     (p) =>
       p.id !== product.id &&
-      p.tags.some((tag) => product.tags.includes(tag))
+      categorizeProduct(p).some((category) => categories.includes(category))
   ).slice(0, limit);
 }

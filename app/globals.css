@@ -10,6 +10,14 @@ body {
   color: var(--color-text);
   background-color: var(--color-background);
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 h1,

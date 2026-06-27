@@ -27,8 +27,15 @@
 .imageWrap {
   position: relative;
   aspect-ratio: 1;
+  padding: var(--space-3);
   background: var(--color-white);
   overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .imageWrap {
+    padding: var(--space-4);
+  }
 }
 
 .image {
@@ -47,24 +54,33 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background: var(--color-gray-50);
+  background: var(--color-white);
   color: var(--color-gray-400);
   font-size: var(--font-size-sm);
 }
 
 .badge {
   position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
+  top: var(--space-2);
+  right: var(--space-2);
   z-index: 1;
-  padding: var(--space-1) var(--space-3);
+  padding: 0.2rem 0.55rem;
   background: var(--color-accent);
   color: var(--color-white);
-  font-size: var(--font-size-xs);
+  font-size: 0.625rem;
   font-weight: var(--font-weight-semibold);
   border-radius: var(--radius-full);
   text-transform: capitalize;
   box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 640px) {
+  .badge {
+    top: var(--space-3);
+    right: var(--space-3);
+    padding: var(--space-1) var(--space-3);
+    font-size: var(--font-size-xs);
+  }
 }
 
 .badgeSale {
@@ -75,11 +91,25 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: var(--space-4);
-  text-align: center;
-  gap: var(--space-3);
+  padding: var(--space-3);
+  text-align: left;
+  gap: var(--space-2);
   border-top: 1px solid var(--color-border);
   background: var(--color-white);
+}
+
+@media (min-width: 400px) {
+  .content {
+    padding: var(--space-3) var(--space-3) var(--space-4);
+    text-align: center;
+    gap: var(--space-3);
+  }
+}
+
+@media (min-width: 640px) {
+  .content {
+    padding: var(--space-4);
+  }
 }
 
 .titleLink {
@@ -87,10 +117,10 @@
 }
 
 .title {
-  font-size: var(--font-size-xs);
+  font-size: 0.8125rem;
   font-weight: var(--font-weight-medium);
   color: var(--color-accent);
-  line-height: var(--line-height-snug);
+  line-height: 1.35;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -98,8 +128,10 @@
   transition: color var(--transition-fast);
 }
 
-.titleLink:hover .title {
-  color: var(--color-primary);
+@media (min-width: 400px) {
+  .title {
+    font-size: var(--font-size-xs);
+  }
 }
 
 @media (min-width: 640px) {
@@ -108,19 +140,36 @@
   }
 }
 
+.titleLink:hover .title {
+  color: var(--color-primary);
+}
+
 .priceRow {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: var(--space-2);
   flex-wrap: wrap;
 }
 
+@media (min-width: 400px) {
+  .priceRow {
+    justify-content: center;
+  }
+}
+
 .price,
 .salePrice {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-accent);
+}
+
+@media (min-width: 640px) {
+  .price,
+  .salePrice {
+    font-size: var(--font-size-base);
+  }
 }
 
 .salePrice {
@@ -128,24 +177,31 @@
 }
 
 .comparePrice {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--color-gray-400);
   text-decoration: line-through;
 }
 
 .button {
   width: 100%;
-  padding: var(--space-3) var(--space-4);
+  padding: 0.625rem var(--space-3);
   border: 1px solid var(--color-accent);
   border-radius: var(--radius-full);
   background: var(--color-white);
   color: var(--color-accent);
-  font-size: var(--font-size-sm);
+  font-size: 0.8125rem;
   font-weight: var(--font-weight-semibold);
   transition:
     background-color var(--transition-fast),
     color var(--transition-fast),
     border-color var(--transition-fast);
+}
+
+@media (min-width: 640px) {
+  .button {
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--font-size-sm);
+  }
 }
 
 .button:hover:not(:disabled) {

@@ -2,13 +2,14 @@
 
 import { useState, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Logo from "@/components/Common/Logo";
 import Navigation from "@/components/Navigation/Navigation";
 import CartDrawer from "@/components/Cart/CartDrawer";
 import { useCartStore } from "@/store/cartStore";
 import { useScrollLock } from "@/hooks/useScrollLock";
 import { useScrolled } from "@/hooks/useScrolled";
-import { SITE_TAGLINE } from "@/constants/site";
+import SearchBox from "@/components/Search/SearchBox";
 import { cn } from "@/utils/cn";
 import styles from "./Header.module.css";
 
@@ -21,11 +22,15 @@ function SearchIcon() {
   );
 }
 
-function UserIcon() {
+function CloseIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="1.75" />
-      <path d="M4 20c0-4 4-6 8-6s8 2 8 6" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" />
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M6 6l12 12M18 6L6 18"
+        stroke="currentColor"
+        strokeWidth="2.25"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }
@@ -47,101 +52,100 @@ function CartIcon() {
 }
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const [menuPath, setMenuPath] = useState(null);
+  const [searchPath, setSearchPath] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const isMenuOpen = menuPath === pathname;
+  const isSearchOpen = searchPath === pathname;
   const isScrolled = useScrolled();
   const toggleCart = useCartStore((state) => state.toggleCart);
   const itemCount = useCartStore((state) => state.getItemCount());
 
   useScrollLock(isMenuOpen);
 
-  const closeMenu = useCallback(() => setIsMenuOpen(false), []);
-
-  const handleSearch = (event) => {
-    event.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/shop?search=${encodeURIComponent(searchQuery.trim())}`;
-    }
-  };
+  const closeMenu = useCallback(() => setMenuPath(null), []);
+  const closeSearch = useCallback(() => setSearchPath(null), []);
 
   return (
     <>
       <header className={cn(styles.header, isScrolled && styles.headerScrolled)}>
         <div className={styles.topAccent} aria-hidden="true" />
 
-        <div className={styles.inner}>
-          <Logo href="/" onClick={closeMenu} onLight />
+        <div className={styles.mainBar}>
+          <div className={styles.inner}>
+            <div className={styles.brand}>
+              <Logo href="/" onClick={closeMenu} onLight size="compact" className={styles.logo} />
+            </div>
 
-          <Navigation className={styles.navDesktop} onLinkClick={closeMenu} />
+            <div className={styles.navShell}>
+              <Navigation className={styles.navDesktop} onLinkClick={closeMenu} />
+            </div>
 
-          <div className={styles.actions}>
-            <button
-              type="button"
-              className={cn(styles.iconBtn, isSearchOpen && styles.iconBtnActive)}
-              onClick={() => setIsSearchOpen((prev) => !prev)}
-              aria-label="Search"
-              aria-expanded={isSearchOpen}
-            >
-              <SearchIcon />
-            </button>
+            <div className={styles.actions}>
+              <button
+                type="button"
+                className={cn(styles.iconBtn, isSearchOpen && styles.iconBtnActive)}
+                onClick={() => setSearchPath(isSearchOpen ? null : pathname)}
+                aria-label="Search"
+                aria-expanded={isSearchOpen}
+              >
+                <SearchIcon />
+              </button>
 
-            <Link href="/contact" className={styles.iconBtn} aria-label="Account">
-              <UserIcon />
-            </Link>
+              <button
+                type="button"
+                className={cn(styles.cartBtn, itemCount > 0 && styles.cartBtnActive)}
+                onClick={toggleCart}
+                aria-label={`Cart, ${itemCount} items`}
+              >
+                <CartIcon />
+                <span className={styles.cartLabel}>Cart</span>
+                {itemCount > 0 && (
+                  <span className={styles.cartBadge} key={itemCount}>
+                    {itemCount}
+                  </span>
+                )}
+              </button>
 
-            <button
-              type="button"
-              className={cn(styles.cartBtn, itemCount > 0 && styles.cartBtnActive)}
-              onClick={toggleCart}
-              aria-label={`Cart, ${itemCount} items`}
-            >
-              <CartIcon />
-              {itemCount > 0 && (
-                <span className={styles.cartBadge} key={itemCount}>
-                  {itemCount}
-                </span>
-              )}
-            </button>
+              <Link href="/shop" className={styles.shopBtn}>
+                Shop now
+              </Link>
 
-            <button
-              type="button"
-              className={cn(styles.menuToggle, isMenuOpen && styles.menuToggleOpen)}
-              onClick={() => setIsMenuOpen((prev) => !prev)}
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-navigation"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-            >
-              <span className={styles.menuBar} />
-              <span className={styles.menuBar} />
-              <span className={styles.menuBar} />
-            </button>
+              <button
+                type="button"
+                className={cn(styles.menuToggle, isMenuOpen && styles.menuToggleOpen)}
+                onClick={() => setMenuPath(isMenuOpen ? null : pathname)}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-navigation"
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              >
+                <span className={styles.menuBar} />
+                <span className={styles.menuBar} />
+                <span className={styles.menuBar} />
+              </button>
+            </div>
           </div>
         </div>
 
         <div className={cn(styles.searchPanel, isSearchOpen && styles.searchPanelOpen)}>
-          <form onSubmit={handleSearch} className={styles.searchForm}>
-            <SearchIcon />
-            <input
-              type="search"
+          <div className={styles.searchForm}>
+            <SearchBox
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search products, brands, categories..."
-              className={styles.searchInput}
-              aria-label="Search products"
+              onChange={setSearchQuery}
+              autoFocus={isSearchOpen}
+              onNavigate={closeSearch}
+              className={styles.searchBox}
             />
-            <button type="submit" className={styles.searchSubmit}>
-              Search
-            </button>
             <button
               type="button"
               className={styles.searchClose}
-              onClick={() => setIsSearchOpen(false)}
+              onClick={closeSearch}
               aria-label="Close search"
             >
-              ✕
+              <CloseIcon />
             </button>
-          </form>
+          </div>
         </div>
       </header>
 
@@ -158,7 +162,7 @@ export default function Header() {
         aria-label="Mobile navigation"
       >
         <div className={styles.mobileNavHeader}>
-          <p className={styles.mobileNavTitle}>Menu</p>
+          <Logo href="/" onClick={closeMenu} onLight align="start" />
           <button
             type="button"
             className={styles.mobileClose}
@@ -168,8 +172,27 @@ export default function Header() {
             ✕
           </button>
         </div>
+
+        <SearchBox
+          value={searchQuery}
+          onChange={setSearchQuery}
+          variant="mobile"
+          submitLabel="Go"
+          placeholder="Search products..."
+          onNavigate={closeMenu}
+          className={styles.mobileSearchBox}
+        />
+
         <Navigation className={styles.navMobile} onLinkClick={closeMenu} isMobile />
-        <p className={styles.mobileTagline}>{SITE_TAGLINE}</p>
+
+        <div className={styles.mobileFooter}>
+          <Link href="/shop" className={styles.mobileShopBtn} onClick={closeMenu}>
+            Browse wholesale shop
+          </Link>
+          <Link href="/contact" className={styles.mobileContactLink} onClick={closeMenu}>
+            Contact us
+          </Link>
+        </div>
       </aside>
 
       <CartDrawer />

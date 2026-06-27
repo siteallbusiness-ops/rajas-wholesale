@@ -49,8 +49,6 @@ export default function CartDrawer() {
             <Link href="/shop" className={styles.continueLink} onClick={closeCart}>
               Continue shopping
             </Link>
-            <p className={styles.loginHint}>Have an account?</p>
-            <p className={styles.loginHint}>Log in to check out faster.</p>
           </div>
         ) : (
           <>

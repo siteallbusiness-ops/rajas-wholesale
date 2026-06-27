@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Container from "@/components/Sections/Container";
+import ShopSearch from "@/components/Products/ShopSearch";
 import ShopContent from "./ShopContent";
 import { createMetadata } from "@/utils/metadata";
 import { ROUTES } from "@/constants/routes";
@@ -17,6 +18,9 @@ export default function ShopPage() {
       <div className={styles.banner}>
         <Container>
           <h1 className={styles.title}>Products</h1>
+          <Suspense fallback={null}>
+            <ShopSearch />
+          </Suspense>
         </Container>
       </div>
 

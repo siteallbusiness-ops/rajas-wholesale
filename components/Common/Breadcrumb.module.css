@@ -28,6 +28,17 @@
 .current {
   color: var(--color-text);
   font-weight: var(--font-weight-medium);
+  max-width: 11rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .current {
+    max-width: none;
+    white-space: normal;
+  }
 }
 
 .separator {

@@ -93,11 +93,6 @@
   background: var(--color-primary-dark);
 }
 
-.loginHint {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-}
-
 .items {
   flex: 1;
   overflow-y: auto;

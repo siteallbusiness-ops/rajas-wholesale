@@ -59,6 +59,18 @@
   letter-spacing: 0.16em;
 }
 
+.sizeCompact .logoTop {
+  font-size: 1.125rem;
+  letter-spacing: 0.06em;
+}
+
+.sizeCompact .logoBottom {
+  margin-top: 2px;
+  padding: 2px 8px;
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+}
+
 .alignStart {
   align-items: flex-start;
 }

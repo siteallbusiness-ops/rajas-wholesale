@@ -18,7 +18,7 @@
 }
 
 .price {
-  font-size: var(--font-size-xl);
+  font-size: clamp(1.25rem, 4vw, var(--font-size-xl));
   font-weight: var(--font-weight-semibold);
   color: var(--color-accent);
 }
@@ -66,17 +66,24 @@
 }
 
 .variantPill {
-  padding: var(--space-2) var(--space-4);
+  padding: 0.5rem 0.875rem;
   background: var(--color-white);
   border: 1px solid var(--color-border-dark);
   border-radius: var(--radius-full);
-  font-size: var(--font-size-sm);
+  font-size: 0.8125rem;
   font-weight: var(--font-weight-medium);
   color: var(--color-accent);
   transition:
     background-color var(--transition-fast),
     color var(--transition-fast),
     border-color var(--transition-fast);
+}
+
+@media (min-width: 640px) {
+  .variantPill {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--font-size-sm);
+  }
 }
 
 .variantPill:hover:not(.variantPillActive) {
@@ -186,4 +193,43 @@
 .addBtn:disabled:hover {
   background: var(--color-white);
   color: var(--color-gray-400);
+}
+
+.formDrawer {
+  gap: var(--space-4);
+}
+
+.addBtnDrawer {
+  position: sticky;
+  bottom: 0;
+  z-index: 2;
+  margin-top: var(--space-2);
+  padding: var(--space-4);
+  font-size: var(--font-size-base);
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+  box-shadow: 0 -8px 20px rgba(255, 255, 255, 0.92);
+}
+
+.addBtnDrawer:hover:not(:disabled) {
+  background: #0d1830;
+  border-color: #0d1830;
+  color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+  .addBtnDrawer {
+    position: static;
+    box-shadow: none;
+    margin-top: var(--space-3);
+    background: var(--color-white);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .addBtnDrawer:hover:not(:disabled) {
+    background: var(--color-accent);
+    color: var(--color-white);
+  }
 }

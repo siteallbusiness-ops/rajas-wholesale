@@ -22,6 +22,7 @@ export default function Logo({
   const logoClassName = cn(
     styles.logo,
     size === "md" && styles.sizeMd,
+    size === "compact" && styles.sizeCompact,
     align === "start" && styles.alignStart,
     onDark && styles.onDark,
     onLight && styles.onLight,

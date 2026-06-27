@@ -5,7 +5,7 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import ProductGrid from "@/components/Products/ProductGrid";
 import ProductActions from "./ProductActions";
 import ProductGallery from "./ProductGallery";
-import { PRODUCTS, getProductByHandle, getRelatedProducts } from "@/utils/products";
+import { PRODUCTS, getProductByHandle, getRelatedProducts, getProductVendor } from "@/utils/products";
 import { createMetadata } from "@/utils/metadata";
 import styles from "./page.module.css";
 
@@ -38,6 +38,7 @@ export default async function ProductPage({ params }) {
   if (!product) notFound();
 
   const relatedProducts = getRelatedProducts(product);
+  const vendorLabel = getProductVendor(product);
 
   return (
     <>
@@ -68,8 +69,8 @@ export default async function ProductPage({ params }) {
             </div>
 
             <div className={styles.info}>
-              {product.vendor && (
-                <p className={styles.vendorLabel}>{product.vendor}</p>
+              {vendorLabel && (
+                <p className={styles.vendorLabel}>{vendorLabel}</p>
               )}
 
               <h1 className={styles.title}>{product.title}</h1>

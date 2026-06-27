@@ -1,15 +1,17 @@
 export const CATEGORIES = [
   {
     label: "Drinks",
+    subtitle: "Coca-Cola, Fanta, Red Bull, Monster & more",
     href: "/shop?tag=Drinks",
     image:
-      "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/5060759415154.webp?v=1701287433",
-    alt: "Japanese Fanta wholesale drinks",
+      "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/FullSizeRender_fc4f7211-f9d7-4c9f-bc83-76676ef9626a.jpg?v=1701311591",
+    alt: "Coca-Cola and wholesale soft drinks",
     accent: "#2db2ff",
   },
   {
     label: "Chocolates",
-    href: "/shop?tag=chocolate",
+    subtitle: "Bulk bars, boxes and confectionery favourites",
+    href: "/shop?tag=Chocolates",
     image:
       "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/6F8A2F05-2EDA-42A4-8D47-D2E268006BBB.jpg?v=1701312476",
     alt: "Feastables and chocolate wholesale",
@@ -17,6 +19,7 @@ export const CATEGORIES = [
   },
   {
     label: "Crisps",
+    subtitle: "Takis, sharing bags and impulse snack lines",
     href: "/shop?tag=Crisps",
     image:
       "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/91XV09Aa6bL._SL1500.jpg?v=1701539757",
@@ -24,11 +27,20 @@ export const CATEGORIES = [
     accent: "#d97706",
   },
   {
-    label: "Beverages",
-    href: "/shop?tag=Beverages",
+    label: "Sweets",
+    subtitle: "American candy, jellies and pick & mix lines",
+    href: "/shop?tag=Sweets",
     image:
-      "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/71nu6UVREKL._AC_SL1500.jpg?v=1701200694",
-    alt: "Red Bull and beverages wholesale",
+      "https://cdn.shopify.com/s/files/1/0779/7365/1792/files/bl.jpg?v=1701189399",
+    alt: "American candy and sweets wholesale",
     accent: "#c41e3a",
+  },
+  {
+    label: "Cookies",
+    subtitle: "Oreo wafer rolls, biscuits and imported packs",
+    href: "/shop?tag=Cookies",
+    image: "/images/products/oreo/oreo-chocolate-wafer-rolls.webp",
+    alt: "Oreo cookies and biscuits wholesale",
+    accent: "#8b5a2b",
   },
 ];
