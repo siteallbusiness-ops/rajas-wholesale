@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "@/components/Sections/Container";
+import HomeSubHeader from "@/components/Home/HomeSubHeader";
 import HomeHero from "@/components/Home/HomeHero";
 import ShopHighlights from "@/components/Home/ShopHighlights";
 import PromoBanner from "@/components/Home/PromoBanner";
@@ -22,6 +23,7 @@ export default function HomePage() {
 
   return (
     <div className={styles.home}>
+      <HomeSubHeader />
       <HomeHero />
 
       <ShopHighlights />
